@@ -13,7 +13,7 @@ const Galeri = () => {
           Lihatlah berbagai pencapaian kami dalam upaya melestarikan budaya,
           lingkungan, dan kemajuan komunitas. Temukan inspirasi dari setiap
           langkah yang kami ambil."
-        style="galeri w-full h-[550px] mt-24 grid grid-cols-5 grid-rows-5 gap-4"
+        style="galeri w-full mt-24 mb-24"
         content={<GaleriComponent data={dataGaleri} />}
       >
         Galeri Pejantara

@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
 body {
   margin: 0;
   padding: 0;
   background: #e4e6d9;
   scroll-behavior: smooth;
+  font-family: "roboto", sans-serif;
 }

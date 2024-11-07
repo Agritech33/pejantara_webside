@@ -12,7 +12,7 @@ const Layanan = () => {
             berkomitmen untuk menciptakan lingkungan yang bersih dan hijau.
             Jelajahi layanan kami dan bersama-sama wujudkan kota yang lebih
             bersih!"
-        style="card-layanan-container text-white gap-10 grid grid-cols-3 mt-24"
+        style="card-layanan-container text-white gap-5 flex justify-center flex-wrap mt-10 p-10"
         content={dataLayanan.map((layanan) => {
           return (
             <CardLayanan

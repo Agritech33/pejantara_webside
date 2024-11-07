@@ -1,4 +1,5 @@
 import daisyui from "daisyui";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
@@ -11,6 +12,10 @@ export default {
         secondaryAccent: "#C0CFB2",
         background: "#E4E6D9",
         cardlayanan: "#D9D9D9",
+      },
+      fontFamily: {
+        oswald: ["Oswald", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
       },
     },
   },

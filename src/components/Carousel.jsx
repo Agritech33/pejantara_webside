@@ -1,5 +1,5 @@
 // Carousel.js
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const Carousel = ({ width = "full" }) => {
   const images = [

@@ -33,7 +33,7 @@ const Header = () => {
       <nav className="nav w-full h-full flex justify-between items-center">
         <div className="logo w-[155px] h-full">
           <img
-            className="h-full hover:cursor-pointer"
+            className="h-full hover:cursor-pointer md:block hidden"
             src="/logo header.png"
             alt="logo"
             width={155}
@@ -42,32 +42,35 @@ const Header = () => {
         </div>
         <ul className="link flex gap-10 h-full p-3 items-end text-xl text-accent no-underline">
           <li>
-            <Link className="hover:text-black" to="/">
+            <Link className="hover:text-black md:block hidden" to="/">
               Beranda
             </Link>
           </li>
           <li>
-            <Link className="hover:text-black" to="/edukasi">
+            <Link className="hover:text-black md:block hidden" to="/edukasi">
               Edukasi
             </Link>
           </li>
           <li>
-            <Link className="hover:text-black" to="/berita">
+            <Link className="hover:text-black md:block hidden" to="/berita">
               Berita
             </Link>
           </li>
           <li>
-            <Link className="hover:text-black" to="/peta">
+            <Link className="hover:text-black md:block hidden" to="/peta">
               Peta
             </Link>
           </li>
           <li>
-            <Link className="hover:text-black" to="/tentang-kami">
+            <Link
+              className="hover:text-black md:block hidden"
+              to="/tentang-kami"
+            >
               Tentang Kami
             </Link>
           </li>
         </ul>
-        <div className="profile flex gap-5 h-full p-3 items-end text-xl">
+        <div className="profile gap-5 h-full p-3 items-end text-xl md:block hidden">
           <BtnPrimary type="primary">Register</BtnPrimary>
           <BtnPrimary type="secondary">Login</BtnPrimary>
         </div>
