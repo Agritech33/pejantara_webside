@@ -26,53 +26,89 @@ const Header = () => {
 
   return (
     <header
-      className={`header w-full h-[108px] px-16 top-0 fixed transition-transform duration-300 z-50 bg-background ${
+      className={`header w-full h-[108px] px-5 md:px-16 top-0 fixed transition-transform duration-300 z-50 bg-background ${
         showHeader ? "transform translate-y-0" : "transform -translate-y-full"
       }`}
     >
-      <nav className="nav w-full h-full flex justify-between items-center">
-        <div className="logo w-[155px] h-full">
-          <img
+      <nav className="navbar h-full w-full flex justify-between items-center">
+        <div className="logo md:w-[155px] h-full flex justify-center items-center">
+          <Link
+            to="/"
+            className="hover:cursor-pointer md:text-4xl text-2xl text-accent font-oswald font-semibold"
+          >
+            Pejantara
+          </Link>
+          {/* <img
             className="h-full hover:cursor-pointer md:block hidden"
             src="/logo header.png"
             alt="logo"
             width={155}
             height={108}
-          />
+          /> */}
         </div>
-        <ul className="link flex gap-10 h-full p-3 items-end text-xl text-accent no-underline">
+        <ul className="link flex gap-10 h-full p-3 items-center text-xl text-accent no-underline">
           <li>
-            <Link className="hover:text-black md:block hidden" to="/">
+            <Link
+              className="hover:text-black md:block hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
+              to="/"
+            >
               Beranda
             </Link>
           </li>
           <li>
-            <Link className="hover:text-black md:block hidden" to="/edukasi">
+            <Link
+              className="hover:text-black md:block hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
+              to="/edukasi"
+            >
               Edukasi
             </Link>
           </li>
           <li>
-            <Link className="hover:text-black md:block hidden" to="/berita">
+            <Link
+              className="hover:text-black md:block hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
+              to="/berita"
+            >
               Berita
             </Link>
           </li>
           <li>
-            <Link className="hover:text-black md:block hidden" to="/peta">
+            <Link
+              className="hover:text-black md:block hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
+              to="/peta"
+            >
               Peta
             </Link>
           </li>
           <li>
             <Link
-              className="hover:text-black md:block hidden"
+              className="hover:text-black md:block hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
               to="/tentang-kami"
             >
               Tentang Kami
             </Link>
           </li>
         </ul>
-        <div className="profile gap-5 h-full p-3 items-end text-xl md:block hidden">
+        <div className="profile gap-5 h-full p-3 items-center text-xl md:flex hidden">
           <BtnPrimary type="primary">Register</BtnPrimary>
           <BtnPrimary type="secondary">Login</BtnPrimary>
+        </div>
+        <div className="hamburger md:hidden block">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="feather feather-menu"
+          >
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
         </div>
       </nav>
     </header>

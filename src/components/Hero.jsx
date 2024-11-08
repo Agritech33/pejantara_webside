@@ -20,7 +20,7 @@ const Hero = () => {
           className="w-3/4 md:w-auto h-1/2 md:h-4/5 mt-8 md:mt-0"
         />
       </div>
-      <div className="w-full h-14 bg-gradient-to-t from-background absolute mb:bottom-0 bottom-[-10%]"></div>
+      <div className="w-full h-14 bg-gradient-to-t from-background absolute xl:bottom-0 mb:bottom-0 bottom-[-10%]"></div>
     </div>
   );
 };

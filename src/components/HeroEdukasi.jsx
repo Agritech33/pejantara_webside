@@ -13,6 +13,7 @@ const HeroEdukasi = () => {
         </div>
         <img src="Image 1.svg" alt="heroBerita" className="h-4/5" />
       </div>
+      <div className="w-full h-14 bg-gradient-to-t from-background absolute xl:bottom-0 mb:bottom-0 bottom-[-10%]"></div>
     </div>
   );
 };
