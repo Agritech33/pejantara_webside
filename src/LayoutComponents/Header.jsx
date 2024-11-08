@@ -39,7 +39,7 @@ const Header = () => {
             Pejantara
           </Link>
           {/* <img
-            className="h-full hover:cursor-pointer md:block hidden"
+            className="h-full hover:cursor-pointer xl:block md:hidden hidden"
             src="/logo header.png"
             alt="logo"
             width={155}
@@ -49,7 +49,7 @@ const Header = () => {
         <ul className="link flex gap-10 h-full p-3 items-center text-xl text-accent no-underline">
           <li>
             <Link
-              className="hover:text-black md:block hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
+              className="hover:text-black xl:block md:hidden hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
               to="/"
             >
               Beranda
@@ -57,7 +57,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-              className="hover:text-black md:block hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
+              className="hover:text-black xl:block md:hidden hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
               to="/edukasi"
             >
               Edukasi
@@ -65,7 +65,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-              className="hover:text-black md:block hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
+              className="hover:text-black xl:block md:hidden hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
               to="/berita"
             >
               Berita
@@ -73,7 +73,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-              className="hover:text-black md:block hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
+              className="hover:text-black xl:block md:hidden hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
               to="/peta"
             >
               Peta
@@ -81,7 +81,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-              className="hover:text-black md:block hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
+              className="hover:text-black xl:block md:hidden hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
               to="/tentang-kami"
             >
               Tentang Kami
