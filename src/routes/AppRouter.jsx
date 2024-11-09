@@ -15,8 +15,8 @@ const AppRouter = () => (
       {/* Rute dengan MainLayout */}
       <Route element={<MainLayout />}>
         <Route path="/" element={<Beranda />} />
-        <Route path="/edukasi" element={<Edukasi />} />
-        <Route path="/berita" element={<Berita />} />
+        <Route path="/edukasi/:id?" element={<Edukasi />} />
+        <Route path="/berita/:id?" element={<Berita />} />
         <Route path="/peta" element={<Peta />} />
         <Route path="/tentang-kami" element={<TentangKami />} />
       </Route>

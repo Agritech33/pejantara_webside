@@ -68,10 +68,44 @@ const FeetBackLayout = () => {
           </div>
         </div>
       </div>
-      <div className="bottom-container h-[500px]">
-        <div className="container-form">
-          <div className="title"></div>
-          <div className="form"></div>
+      <div className="bottom-container w-full h-[700px] p-24">
+        <div className="container-form w-full bg-secondaryAccent rounded-2xl h-full shadow-md shadow-slate-600 flex text-accent">
+          <div className="title w-1/2 flex flex-col justify-center items-center gap-5 p-48">
+            <h1 className="text-6xl font-bold font-oswald">Pejantara</h1>
+            <h3 className="text-2xl text-center">
+              Feedback dari User sangat penting untuk kami, mohon tinggalkan
+              pesan & kesan Anda untuk Pejantara.
+            </h3>
+          </div>
+          <div className="form w-1/2 flex flex-col justify-center items-center px-10 gap-5">
+            <div className="input-container w-full">
+              <h3>Full Name</h3>
+              <input
+                type="text"
+                placeholder="Full Name"
+                className="w-full h-12 px-5 rounded-2xl shadow-md shadow-slate-600 bg-white"
+              />
+            </div>
+            <div className="input-container w-full">
+              <h3>Email</h3>
+              <input
+                type="text"
+                placeholder="Email"
+                className="w-full h-12 px-5 rounded-2xl shadow-md shadow-slate-600 bg-white"
+              />
+            </div>
+            <div className="input-container w-full">
+              <h3>Message</h3>
+              <input
+                type="text area"
+                placeholder="Message"
+                className="w-full h-20 px-5 rounded-2xl shadow-md shadow-slate-600 bg-white"
+              />
+            </div>
+            <button className="py-3 px-12 bg-accent text-white rounded-full hover:bg-secondaryAccent hover:text-accent hover:scale-105 transition-all duration-150 ease-in-out">
+              Kirim
+            </button>
+          </div>
         </div>
       </div>
     </div>
