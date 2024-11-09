@@ -1,6 +1,6 @@
 const HeroEdukasi = () => {
   return (
-    <div className="Beranda w-full h-screen flex flex-col items-center justify-start">
+    <div className="Beranda w-full h-screen mb-20 flex flex-col items-center justify-start">
       <div className="heroBerita-container w-full h-screen flex px-24 items-end">
         <div className="heroBerita-title w-2/3 flex justify-center h-full flex-col">
           <h1 className="text-8xl font-bold text-accent">
