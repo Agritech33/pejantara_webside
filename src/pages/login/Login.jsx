@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 const Login = () => {
   return (
-    <div>
+    <div className="w-full h-screen flex items-center justify-center">
       <Helmet>
         <title>Login Page</title>
       </Helmet>
