@@ -1,8 +1,8 @@
 const data = [
   {
     id: 1,
-    question: "Apakah ada biaya?",
-    answer: "Tidak ada biaya.",
+    question: "Apakah mbk dea sudah makan?",
+    answer: "Belum bg laper aku.",
   },
   {
     id: 2,

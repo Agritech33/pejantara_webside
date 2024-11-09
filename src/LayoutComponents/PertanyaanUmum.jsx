@@ -12,7 +12,7 @@ const PertanyaanUmum = () => {
           memulai kehidupan lingkungan yang bersih. Jika Anda tidak menemukan
           jawaban yang diinginkan, silahkan hubungi tim kami!"
       style="radio-container mt-20 w-full space-y-2"
-      content={dataPertanyaan.slice(0, 5).map((pertanyaan) => {
+      content={dataPertanyaan.slice(0, 6).map((pertanyaan) => {
         return (
           <RadioFaq
             key={pertanyaan.id}

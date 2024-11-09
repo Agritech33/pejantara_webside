@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   return (
-    <div>
+    <div className="w-full h-screen flex items-center justify-center">
       <Helmet>
         <title>Register Page</title>
       </Helmet>
