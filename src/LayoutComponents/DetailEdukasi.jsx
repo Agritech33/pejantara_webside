@@ -30,7 +30,7 @@ const DetailEdukasi = ({ Id }) => {
                 />
               ))}
           </div>
-          <div className="right-container w-3/4 border bg-secondaryAccent shadow-xl flex flex-col items-center justify-start px-20 gap-10 py-20 rounded-2xl">
+          <div className="right-container w-3/4 border bg-secondaryAccent flex flex-col items-center justify-start px-20 gap-10 py-20 rounded-2xl">
             <img
               src={dataEdukasi.image}
               alt=""
