@@ -1,4 +1,30 @@
+import { useState } from "react";
 const FeetBackLayout = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form Data:", formData);
+    alert("Tanggapan Kamu Telah Terkirim, Terima Kasih!");
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    });
+  };
+
   return (
     <div className="container-feetback w-full">
       <div className="top-container h-screen w-full flex justify-between">
@@ -71,41 +97,57 @@ const FeetBackLayout = () => {
       <div className="bottom-container w-full h-[700px] p-24">
         <div className="container-form w-full bg-secondaryAccent rounded-2xl h-full shadow-md shadow-slate-600 flex text-accent">
           <div className="title w-1/2 flex flex-col justify-center items-center gap-5 p-48">
-            <h1 className="text-6xl font-bold font-oswald">Pejantara</h1>
+            <h1 className="text-6xl font-bold font-oswald uppercase">
+              Pejantara
+            </h1>
             <h3 className="text-2xl text-center">
               Feedback dari User sangat penting untuk kami, mohon tinggalkan
               pesan & kesan Anda untuk Pejantara.
             </h3>
           </div>
-          <div className="form w-1/2 flex flex-col justify-center items-center px-10 gap-5">
+          <form
+            onSubmit={handleSubmit}
+            className="form w-1/2 flex flex-col justify-center items-center px-10 gap-5"
+          >
             <div className="input-container w-full">
               <h3>Full Name</h3>
               <input
                 type="text"
+                name="name"
                 placeholder="Full Name"
-                className="w-full h-12 px-5 rounded-2xl shadow-md shadow-slate-600 bg-white"
+                value={formData.name}
+                onChange={handleChange}
+                className="name w-full h-12 px-5 rounded-2xl shadow-md shadow-slate-600 bg-white"
               />
             </div>
             <div className="input-container w-full">
               <h3>Email</h3>
               <input
-                type="text"
+                type="email"
+                name="email"
                 placeholder="Email"
-                className="w-full h-12 px-5 rounded-2xl shadow-md shadow-slate-600 bg-white"
+                value={formData.email}
+                onChange={handleChange}
+                className="email w-full h-12 px-5 rounded-2xl shadow-md shadow-slate-600 bg-white"
               />
             </div>
             <div className="input-container w-full">
               <h3>Message</h3>
-              <input
-                type="text area"
+              <textarea
+                name="message"
                 placeholder="Message"
-                className="w-full h-20 px-5 rounded-2xl shadow-md shadow-slate-600 bg-white"
-              />
+                value={formData.message}
+                onChange={handleChange}
+                className="message w-full h-20 px-5 rounded-2xl shadow-md shadow-slate-600 bg-white"
+              ></textarea>
             </div>
-            <button className="py-3 px-12 bg-accent text-white rounded-full hover:bg-secondaryAccent hover:text-accent hover:scale-105 transition-all duration-150 ease-in-out">
+            <button
+              type="submit"
+              className="py-3 px-12 bg-accent text-white rounded-full hover:bg-secondaryAccent hover:text-accent hover:scale-105 transition-all duration-150 ease-in-out"
+            >
               Kirim
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </div>

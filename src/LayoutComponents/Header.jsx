@@ -34,7 +34,7 @@ const Header = () => {
         <div className="logo md:w-[155px] h-full flex justify-center items-center">
           <Link
             to="/"
-            className="hover:cursor-pointer md:text-4xl text-2xl text-background font-oswald font-semibold"
+            className="hover:cursor-pointer md:text-4xl text-2xl text-background font-oswald font-semibold uppercase"
           >
             Pejantara
           </Link>
@@ -50,7 +50,7 @@ const Header = () => {
           <li>
             <Link
               className="hover:text-secondary xl:block md:hidden hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
-              to="/"
+              to="/beranda"
             >
               Beranda
             </Link>
