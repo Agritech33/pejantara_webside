@@ -1,8 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import HeroEdukasi from "../../components/HeroEdukasi";
 import FeetBackLayout from "../../LayoutComponents/FeetBackLayout";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import EdukasiLayout from "../../LayoutComponents/EdukasiLayout";
+import DetailEdukasi from "../../LayoutComponents/DetailEdukasi";
 const Edukasi = () => {
   const { id } = useParams();
 
@@ -13,9 +14,8 @@ const Edukasi = () => {
           <Helmet>
             <title>Edukasi Page {id}</title>
           </Helmet>
-          <div className="w-full h-screen flex items-center justify-center">
-            <h1>Edukasi {id}</h1>
-            <Link to="/edukasi/2">push me</Link>
+          <div className="w-full flex items-center justify-center">
+            <DetailEdukasi Id={id} />
           </div>
         </>
       ) : (
