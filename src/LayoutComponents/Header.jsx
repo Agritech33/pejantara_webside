@@ -50,7 +50,7 @@ const Header = () => {
           <li>
             <Link
               className="hover:text-secondary xl:block md:hidden hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
-              to="/beranda"
+              to="/"
             >
               Beranda
             </Link>
