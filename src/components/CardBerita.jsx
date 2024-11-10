@@ -17,9 +17,14 @@ const CardBerita = ({
 
   const styleImage = image === "secondary" ? "w-full h-3/4" : "w-5/12";
 
+  const titleType =
+    type === "secondary" || type === "tertiary"
+      ? "card-body"
+      : "card-body w-1/2";
+
   return (
     <div className={cardType}>
-      <div className="card-body">
+      <div className={titleType}>
         <h2 className="card-title">{title}</h2>
         <p>{subtitle}</p>
       </div>
@@ -28,7 +33,7 @@ const CardBerita = ({
           <img
             src={imageUrl}
             alt="Movie"
-            className="w-full h-full object-cover rounded-lg"
+            className="w-full h-full object-cover rounded-2xl hover:scale-95 transition-all duration-300 ease-in-out"
           />
         </Link>
       </figure>

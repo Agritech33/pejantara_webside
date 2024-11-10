@@ -5,13 +5,9 @@ const Footer = () => {
         <div className="container mx-auto px-4 border-t border-white mt-4 pt-4">
           <div className="flex justify-between">
             <div className="w-1/3">
-              <img
-                src="./logo header.png"
-                alt="Company logo with a green leaf and the text 'pejantara' underneath"
-                className="mb-4"
-                width="150"
-                height="150"
-              />
+              <h1 className="text-4xl font-bold mb-2 font-oswald uppercase">
+                Pejantara
+              </h1>
             </div>
             <div className="w-1/3">
               <h3 className="font-bold mb-2">About</h3>
