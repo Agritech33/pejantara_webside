@@ -12,6 +12,7 @@ export default {
         secondaryAccent: "#C0CFB2",
         background: "#E4E6D9",
         cardlayanan: "#D9D9D9",
+        bgBtn: "#16312B",
       },
       fontFamily: {
         oswald: ["Oswald", "sans-serif"],

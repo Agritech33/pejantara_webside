@@ -18,7 +18,7 @@ const CardContainer = () => {
             />
           ))}
         </div>
-        <div className="card-container-right w-1/2 flex flex-col gap-10">
+        <div className="card-container-right w-1/2 flex flex-col gap-11">
           {dataBerita.slice(1, 2).map((item) => (
             <CardBerita
               key={item.id}

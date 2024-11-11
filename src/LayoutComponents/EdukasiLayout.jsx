@@ -7,7 +7,7 @@ const EdukasiLayout = () => {
   return (
     <>
       <div className="card-container flex flex-col lg:flex-row justify-center items-center w-full md:w-11/12 lg:w-3/4 gap-5 mt-48">
-        <div className="second-card-container-1 p-5 xl:p-10 space-y-5 xl:space-y-10 rounded-xl bg-slate-500 w-full">
+        <div className="second-card-container-1 p-5 xl:p-10 space-y-5 xl:space-y-10 rounded-xl bg-secondaryAccent w-full">
           {dataEdukasi.slice(0, 1).map((item) => {
             return (
               <CardEdukasi
@@ -29,7 +29,7 @@ const EdukasiLayout = () => {
             );
           })}
         </div>
-        <div className="second-card-container-2 p-5 xl:p-10 space-y-5 xl:space-y-10 rounded-xl bg-slate-500 w-full">
+        <div className="second-card-container-2 p-5 xl:p-10 space-y-5 xl:space-y-10 rounded-xl bg-secondaryAccent w-full">
           {dataEdukasi.slice(2, 3).map((item) => {
             return (
               <CardEdukasi
@@ -51,7 +51,7 @@ const EdukasiLayout = () => {
             );
           })}
         </div>
-        <div className="second-card-container-3 p-5 xl:p-10 space-y-5 xl:space-y-10 rounded-xl bg-slate-500 w-full">
+        <div className="second-card-container-3 p-5 xl:p-10 space-y-5 xl:space-y-10 rounded-xl bg-secondaryAccent w-full">
           {dataEdukasi.slice(4, 5).map((item) => {
             return (
               <CardEdukasi

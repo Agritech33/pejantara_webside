@@ -15,7 +15,7 @@ const DetailEdukasi = ({ Id }) => {
 
   return (
     <>
-      <div className="container-detail-edukasi w-full py-56">
+      <div className="container-detail-edukasi w-full py-40">
         <div className="detail-edukasi flex justify-between w-full text-accent">
           <div className="left-container px-10 w-1/4 flex flex-col gap-28">
             <h1 className="text-4xl font-bold">Temukan Lebih Banyak Di Sini</h1>
