@@ -1,5 +1,5 @@
-// Carousel.js
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 const Carousel = ({ width = "full" }) => {
   const images = [
@@ -18,7 +18,7 @@ const Carousel = ({ width = "full" }) => {
       setCurrentIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000); // Ganti slide setiap 3 detik
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [images.length]);
@@ -51,6 +51,10 @@ const Carousel = ({ width = "full" }) => {
       </div>
     </div>
   );
+};
+
+Carousel.propTypes = {
+  width: PropTypes.string,
 };
 
 export default Carousel;

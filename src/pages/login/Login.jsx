@@ -1,12 +1,23 @@
 import { Helmet } from "react-helmet-async";
+import AuthLayout from "../../LayoutComponents/AuthLayout";
+import FormLogin from "../../components/FormLogin";
 const Login = () => {
   return (
-    <div className="w-full h-screen flex items-center justify-center">
+    <>
       <Helmet>
         <title>Login Page</title>
       </Helmet>
-      <h1>Login Page brayyyyydaa</h1>
-    </div>
+      <div className="w-full h-screen">
+        <AuthLayout
+          title="Masuk Dengan Akun"
+          paragraph="Belum punya akun?"
+          href="Register"
+          type="login"
+        >
+          <FormLogin name_btn="Masuk" />
+        </AuthLayout>
+      </div>
+    </>
   );
 };
 

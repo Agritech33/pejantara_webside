@@ -1,7 +1,8 @@
 const berita = [
   {
     id: 1,
-    title: "Sampah Batam Harus Dikelola dengan Sistem Modern",
+    title:
+      "Sampah Batam Harus Dikelola dengan Sistem Modern Pemko Batam Siap Terapkan Denda Rp2,5 Juta bagi Pembuang Sampah Sembarangan.",
     deskripsi_singkat:
       "lorem ipsum dolor sit amet consectetur adipisicing elit.",
     deskripsi:

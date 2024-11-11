@@ -13,7 +13,7 @@ const CardBerita = ({
       ? "card card-side bg-transparent text-accent flex-col w-full h-full flex justify-center"
       : type === "tertiary"
       ? "card card-side bg-transparent text-accent flex-col-reverse w-full h-full flex items-center justify-center"
-      : "card card-side bg-transparent text-accent h-64 w-full";
+      : "card card-side bg-transparent text-accent h-56 w-full";
 
   const styleImage = image === "secondary" ? "w-full h-3/4" : "w-5/12";
 
@@ -22,10 +22,13 @@ const CardBerita = ({
       ? "card-body"
       : "card-body w-1/2";
 
+  const styleTitle =
+    type === "secondary" ? "text-3xl font-bold" : "text-xl font-bold";
+
   return (
     <div className={cardType}>
       <div className={titleType}>
-        <h2 className="card-title">{title}</h2>
+        <h2 className={styleTitle}>{title}</h2>
         <p>{subtitle}</p>
       </div>
       <figure className={styleImage}>

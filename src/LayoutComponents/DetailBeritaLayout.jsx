@@ -34,7 +34,9 @@ const DetailBeritaLayout = ({ id }) => {
       <div className="detail-berita w-full pt-[15vh] text-accent">
         <div className="container-detail-berita flex flex-col items-center px-[22%] gap-5 mb-5">
           <div className="title-container">
-            <h1 className="text-6xl font-bold">{dataBerita.title}</h1>
+            <h1 className="text-6xl font-bold text-center">
+              {dataBerita.title}
+            </h1>
             <p className="text-xl mt-4 text-center">{dataBerita.date}</p>
           </div>
           <img
