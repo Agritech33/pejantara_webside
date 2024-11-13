@@ -1,8 +1,16 @@
 import { Helmet } from "react-helmet-async";
 import HeroPeta from "../../components/HeroPeta";
 import MapsComponents from "../../components/MapsComponent";
+import { useState } from "react";
 
 const Peta = () => {
+  const [nearestLocations, setNearestLocations] = useState([]);
+
+  // Fungsi untuk menerima data nearestLocations dari MapComponent
+  const handleNearestLocations = (locations) => {
+    setNearestLocations(locations);
+  };
+
   return (
     <div>
       <Helmet>
@@ -30,8 +38,10 @@ const Peta = () => {
         </section>
         <section className="py-4">
           <div className="bg-white p-4 shadow-md">
-            <div className="maps-container w-full h-[70vh]">
-              <MapsComponents />
+            <div className="maps-container w-full h-[70vh] z-10">
+              <MapsComponents
+                onNearestLocationsChange={handleNearestLocations}
+              />
             </div>
             <div className="flex justify-center mt-4">
               <input
@@ -50,17 +60,20 @@ const Peta = () => {
             Rekomendasi <span className="text-primary">TPS Terdekat</span>
           </h2>
           <div className="flex flex-wrap justify-center gap-4 mt-4">
-            {[...Array(3)].map((_, i) => (
+            {nearestLocations.map((location) => (
               <div
-                key={i}
+                key={location.id}
                 className="bg-primary p-4 shadow-md rounded-lg w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
               >
                 <img
                   src="tpsSampah.png"
-                  alt="TPS terdekat"
+                  alt="TPA terdekat"
                   className="w-full h-48 object-cover shadow-2xl"
                 />
-                <p className="mt-2 text-center">TPS Terkini</p>
+                <p className="mt-2 text-center">{location.name}</p>
+                <p className="mt-2 text-center">
+                  {location.latitude}-{location.longitude}
+                </p>
               </div>
             ))}
           </div>
