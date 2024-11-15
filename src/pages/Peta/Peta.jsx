@@ -16,7 +16,7 @@ const Peta = () => {
       <Helmet>
         <title>Peta</title>
       </Helmet>
-      <main className="bg-background mt-28">
+      <main className="bg-background pt-16 md:pt-[5.5rem]">
         <HeroPeta />
         <section className="text-center py-8 bg-gray-200">
           <h2 className="text-2xl font-bold">
