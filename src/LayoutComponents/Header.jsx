@@ -45,7 +45,6 @@ const Header = () => {
             </div>
             <div className="hidden flex-none lg:block">
               <ul className="menu menu-horizontal flex gap-3 h-full p-3 items-center text-xl text-background no-underline">
-                {/* Navbar menu content here */}
                 <li>
                   <Link
                     className="hover:text-secondary hover:bg-[#16312B] xl:block md:hidden hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"

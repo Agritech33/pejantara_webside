@@ -9,8 +9,9 @@ import Register from "../pages/Register/Register";
 import Peta from "../pages/Peta/Peta";
 import TentangKami from "../pages/TentangKami/TentangKami";
 import Demo from "../pages/demo/demo";
-import PenggunaPage from "../pages/pengguna/pengguna";
-import PenggunaLayout from "../layouts/PenggunaLayout";
+import PenggunaLayout from "../pages/pengguna/penggunaLayout";
+import ProfilePage from "../pages/pengguna/Profile";
+import Settings from "../pages/pengguna/Settings";
 
 const AppRouter = () => (
   <Router>
@@ -29,7 +30,8 @@ const AppRouter = () => (
       <Route path="*" element={<NotFound />} />
       {/* Rute untuk Pengguna */}
       <Route element={<PenggunaLayout />}>
-        <Route path="/pengguna" element={<PenggunaPage />} />
+        <Route path="/pengguna/profile" element={<ProfilePage />} />
+        <Route path="/pengguna/settings" element={<Settings />} />
       </Route>
 
       {/* Rute untuk auth */}
