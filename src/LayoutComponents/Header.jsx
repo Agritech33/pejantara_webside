@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import BtnPrimary from "../components/BtnPrimary";
+// import BtnPrimary from "../components/BtnPrimary";
 
 const Header = () => {
   const [showHeader, setShowHeader] = useState(true);
@@ -73,8 +73,14 @@ const Header = () => {
 
             {/* Profile Buttons */}
             <div className="profile gap-5 p-3 text-xl md:flex hidden">
-              <BtnPrimary type="primary">Register</BtnPrimary>
-              <BtnPrimary type="secondary">Login</BtnPrimary>
+              <NavLink
+                to="/pengguna/profile"
+                className="hover:cursor-pointer hover:text-secondary"
+              >
+                profile
+              </NavLink>
+              {/* <BtnPrimary type="primary">Register</BtnPrimary>
+              <BtnPrimary type="secondary">Login</BtnPrimary> */}
             </div>
 
             {/* Mobile Menu Toggle */}
