@@ -2,6 +2,9 @@ import daisyui from "daisyui";
 
 /** @type {import('tailwindcss').Config} */
 export default {
+  daisyui: {
+    themes: false, // Nonaktifkan tema bawaan jika tidak digunakan
+  },
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {

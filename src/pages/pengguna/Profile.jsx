@@ -1,8 +1,10 @@
 const ProfilePage = () => {
   return (
-    <div>
-      <h1>Profile</h1>
-    </div>
+    <>
+      <div className="profile-content w-full h-screen">
+        <h1>profile</h1>
+      </div>
+    </>
   );
 };
 

@@ -1,87 +1,38 @@
 import { Outlet } from "react-router-dom";
-import { Link } from "react-router-dom";
+import NavbarProfile from "../../components/navbarProfile";
 
 const PenggunaLayout = () => {
   return (
-    <div className="w-full h-screen flex items-center justify-center">
-      <div className="w-full h-full flex items-center">
-        <div className="sidebar w-96 h-full bg-accent">
-          <div className="flex flex-col h-full w-full p-10">
-            <div className="mb-10">
-              <Link
-                to="/"
-                className="hover:cursor-pointer md:text-3xl text-background font-oswald font-semibold uppercase"
-              >
-                Pejantara
-              </Link>
-            </div>
-            <ul className="no-underline text-white text-xl font-semibold space-y-5">
-              <li>
-                <Link
-                  className="hover:text-secondary xl:block md:hidden hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
-                  to="/"
-                >
-                  Beranda
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="hover:text-secondary xl:block md:hidden hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
-                  to="/edukasi"
-                >
-                  Edukasi
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="hover:text-secondary xl:block md:hidden hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
-                  to="/berita"
-                >
-                  Berita
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="hover:text-secondary xl:block md:hidden hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
-                  to="/peta"
-                >
-                  Peta
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="hover:text-secondary xl:block md:hidden hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
-                  to="/tentang-kami"
-                >
-                  Tentang Kami
-                </Link>
-              </li>
-            </ul>
-            <div className="dropdown dropdown-right dropdown-end absolute bottom-10">
-              <div tabIndex={0} role="button" className="">
-                <img
-                  src="technical-support (1).png"
-                  alt="tecnical-support"
-                  className="w-12 h-w-12 hover:cursor-pointer hover:scale-105 transition-all duration-150 ease-in-out"
-                />
+    <div className="w-full flex items-center justify-center pt-20 px-20">
+      <div className="content w-full">
+        <div className="container-profile w-full rounded-md">
+          <div className="background w-full h-[50vh] overflow-hidden">
+            <img
+              src="/sampul.jpg"
+              alt=""
+              className="w-full h-full object-cover rounded-md transform hover:scale-105 transition duration-500 ease-in-out"
+            />
+          </div>
+          <div className="w-full">
+            <div className="profile w-full flex h-1/3 items-center justify-between">
+              <div className="left flex h-full px-10 gap-10 items-center">
+                <div className="image w-60 h-60 rounded-full overflow-hidden border-8 border-background transform translate-y-[-20%]">
+                  <img src="/profile.jpg" alt="" className="w-full h-full" />
+                </div>
+                <div className="flex flex-col gap-5 text-black">
+                  <h3 className="font-bold text-4xl">Ageng Prayoga</h3>
+                  <p>Pejantara Team</p>
+                  <p>Ketua Tim</p>
+                </div>
               </div>
-              <ul
-                tabIndex={0}
-                className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
-              >
-                <li>
-                  <a>Item 1</a>
-                </li>
-                <li>
-                  <a>Item 2</a>
-                </li>
-              </ul>
+              <div className="right flex items-center px-10 text-black">
+                <h3>edit profile</h3>
+              </div>
             </div>
           </div>
+          <NavbarProfile />
         </div>
-        <div className="content w-full h-full">
-          <Outlet />
-        </div>
+        <Outlet />
       </div>
     </div>
   );

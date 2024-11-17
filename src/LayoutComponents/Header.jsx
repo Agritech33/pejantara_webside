@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import BtnPrimary from "../components/BtnPrimary";
 
 const Header = () => {
@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <header
       className={`header w-full top-0 fixed transition-transform duration-300 z-50 bg-[#16312B] ${
-        showHeader ? "transform translate-y-0" : "transform -translate-y-full"
+        showHeader ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="drawer">
@@ -35,62 +35,49 @@ const Header = () => {
         <div className="drawer-content">
           {/* Navbar */}
           <div className="navbar bg-transparent flex justify-between items-center px-5 w-full">
+            {/* Logo */}
             <div className="mx-2 flex-1 px-2">
-              <Link
+              <NavLink
                 to="/"
                 className="hover:cursor-pointer md:text-3xl text-background font-oswald font-semibold uppercase"
               >
                 Pejantara
-              </Link>
+              </NavLink>
             </div>
+
+            {/* Desktop Navigation */}
             <div className="hidden flex-none lg:block">
-              <ul className="menu menu-horizontal flex gap-3 h-full p-3 items-center text-xl text-background no-underline">
-                <li>
-                  <Link
-                    className="hover:text-secondary hover:bg-[#16312B] xl:block md:hidden hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
-                    to="/"
-                  >
-                    Beranda
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="hover:text-secondary hover:bg-[#16312B] xl:block md:hidden hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
-                    to="/edukasi"
-                  >
-                    Edukasi
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="hover:text-secondary hover:bg-[#16312B] xl:block md:hidden hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
-                    to="/berita"
-                  >
-                    Berita
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="hover:text-secondary hover:bg-[#16312B] xl:block md:hidden hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
-                    to="/peta"
-                  >
-                    Peta
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="hover:text-secondary hover:bg-[#16312B] xl:block md:hidden hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
-                    to="/tentang-kami"
-                  >
-                    Tentang Kami
-                  </Link>
-                </li>
+              <ul className="menu-horizontal flex gap-6 p-3 text-xl text-background no-underline">
+                {[
+                  { path: "/", label: "Beranda" },
+                  { path: "/edukasi", label: "Edukasi" },
+                  { path: "/berita", label: "Berita" },
+                  { path: "/peta", label: "Peta" },
+                  { path: "/tentang-kami", label: "Tentang Kami" },
+                ].map((item) => (
+                  <li key={item.path} className="relative">
+                    <NavLink
+                      to={item.path}
+                      className={({ isActive }) =>
+                        `relative block py-2 px-4 rounded-none after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-1 after:bg-secondary after:w-0 after:transition-all after:duration-300 ${
+                          isActive ? "after:w-full" : "hover:after:w-full"
+                        }`
+                      }
+                    >
+                      {item.label}
+                    </NavLink>
+                  </li>
+                ))}
               </ul>
             </div>
-            <div className="profile gap-5 h-full p-3 items-center text-xl md:flex hidden">
+
+            {/* Profile Buttons */}
+            <div className="profile gap-5 p-3 text-xl md:flex hidden">
               <BtnPrimary type="primary">Register</BtnPrimary>
               <BtnPrimary type="secondary">Login</BtnPrimary>
             </div>
+
+            {/* Mobile Menu Toggle */}
             <div className="flex-none lg:hidden">
               <label
                 htmlFor="my-drawer-3"
@@ -114,29 +101,37 @@ const Header = () => {
             </div>
           </div>
         </div>
+
+        {/* Sidebar Navigation */}
         <div className="drawer-side">
           <label
             htmlFor="my-drawer-3"
             aria-label="close sidebar"
             className="drawer-overlay"
           ></label>
-          <ul className="menu bg-base-200 min-h-full w-80 p-4">
-            {/* Sidebar content here */}
-            <li>
-              <Link to="/">Beranda</Link>
-            </li>
-            <li>
-              <Link to="/edukasi">Edukasi</Link>
-            </li>
-            <li>
-              <Link to="/berita">Berita</Link>
-            </li>
-            <li>
-              <Link to="/peta">Peta</Link>
-            </li>
-            <li>
-              <Link to="/tentang-kami">Tentang Kami</Link>
-            </li>
+          <ul className="bg-base-200 min-h-full w-80 p-4">
+            {[
+              { path: "/", label: "Beranda" },
+              { path: "/edukasi", label: "Edukasi" },
+              { path: "/berita", label: "Berita" },
+              { path: "/peta", label: "Peta" },
+              { path: "/tentang-kami", label: "Tentang Kami" },
+            ].map((item) => (
+              <li key={item.path}>
+                <NavLink
+                  to={item.path}
+                  className={({ isActive }) =>
+                    `relative block py-1 px-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-secondary after:w-0 after:transition-all after:duration-300 ${
+                      isActive
+                        ? "after:w-full bg-transparent"
+                        : "hover:after:w-full"
+                    }`
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
