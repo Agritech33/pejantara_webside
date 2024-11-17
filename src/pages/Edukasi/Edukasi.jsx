@@ -29,17 +29,35 @@ const Edukasi = () => {
               <div className="container-title w-full h-1/5 flex justify-center absolute">
                 <div className="title bg-secondary lg:w-1/2 w-4/5 h-full translate-y-[-20%] rounded-md">
                   <div className="container w-full h-full flex justify-evenly items-center">
-                    <div className="icon-container">
-                      <p>icon</p>
-                      <p>subtitle</p>
+                    <div className="icon-container flex flex-col items-center justify-center">
+                      <img
+                        src="Reduce.png"
+                        alt="Recycle"
+                        className="w-20 h-20"
+                      />
+                      <p className="font-oswald text-3xl font-semibold text-white">
+                        subtitle
+                      </p>
                     </div>
-                    <div className="icon-container">
-                      <p>icon</p>
-                      <p>subtitle</p>
+                    <div className="icon-container flex flex-col items-center justify-center">
+                      <img
+                        src="Reuse.png"
+                        alt="Recycle"
+                        className="w-20 h-20"
+                      />
+                      <p className="font-oswald text-3xl font-semibold text-white">
+                        subtitle
+                      </p>
                     </div>
-                    <div className="icon-container">
-                      <p>icon</p>
-                      <p>subtitle</p>
+                    <div className="icon-container flex flex-col items-center justify-center">
+                      <img
+                        src="Recycle.png"
+                        alt="Recycle"
+                        className="w-20 h-20"
+                      />
+                      <p className="font-oswald text-3xl font-semibold text-white">
+                        subtitle
+                      </p>
                     </div>
                   </div>
                 </div>

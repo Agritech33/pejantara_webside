@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import BtnPrimary from "../components/BtnPrimary";
 
 const Header = () => {
@@ -26,91 +26,115 @@ const Header = () => {
 
   return (
     <header
-      className={`header w-full h-[108px] px-5 md:px-16 top-0 fixed transition-transform duration-300 z-50 bg-[#16312B] ${
-        showHeader ? "transform translate-y-0" : "transform -translate-y-full"
+      className={`header w-full top-0 fixed transition-transform duration-300 z-50 bg-[#16312B] ${
+        showHeader ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <nav className="navbar h-full w-full flex justify-between items-center">
-        <div className="logo md:w-[155px] h-full flex justify-center items-center">
-          <Link
-            to="/"
-            className="hover:cursor-pointer md:text-4xl text-2xl text-background font-oswald font-semibold uppercase"
-          >
-            Pejantara
-          </Link>
-          {/* <img
-            className="h-full hover:cursor-pointer xl:block md:hidden hidden"
-            src="/logo header.png"
-            alt="logo"
-            width={155}
-            height={108}
-          /> */}
+      <div className="drawer">
+        <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
+        <div className="drawer-content">
+          {/* Navbar */}
+          <div className="navbar bg-transparent flex justify-between items-center px-5 w-full">
+            {/* Logo */}
+            <div className="mx-2 flex-1 px-2">
+              <NavLink
+                to="/"
+                className="hover:cursor-pointer md:text-3xl text-background font-oswald font-semibold uppercase"
+              >
+                Pejantara
+              </NavLink>
+            </div>
+
+            {/* Desktop Navigation */}
+            <div className="hidden flex-none lg:block">
+              <ul className="menu-horizontal flex gap-6 p-3 text-xl text-background no-underline">
+                {[
+                  { path: "/", label: "Beranda" },
+                  { path: "/edukasi", label: "Edukasi" },
+                  { path: "/berita", label: "Berita" },
+                  { path: "/peta", label: "Peta" },
+                  { path: "/tentang-kami", label: "Tentang Kami" },
+                ].map((item) => (
+                  <li key={item.path} className="relative">
+                    <NavLink
+                      to={item.path}
+                      className={({ isActive }) =>
+                        `relative block py-2 px-4 rounded-none after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-1 after:bg-secondary after:w-0 after:transition-all after:duration-300 ${
+                          isActive ? "after:w-full" : "hover:after:w-full"
+                        }`
+                      }
+                    >
+                      {item.label}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Profile Buttons */}
+            <div className="profile gap-5 p-3 text-xl md:flex hidden">
+              <BtnPrimary type="primary">Register</BtnPrimary>
+              <BtnPrimary type="secondary">Login</BtnPrimary>
+            </div>
+
+            {/* Mobile Menu Toggle */}
+            <div className="flex-none lg:hidden">
+              <label
+                htmlFor="my-drawer-3"
+                aria-label="open sidebar"
+                className="btn btn-square btn-ghost"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  className="inline-block h-6 w-6 stroke-current"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </label>
+            </div>
+          </div>
         </div>
-        <ul className="link flex gap-10 h-full p-3 items-center text-xl text-background no-underline">
-          <li>
-            <Link
-              className="hover:text-secondary xl:block md:hidden hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
-              to="/"
-            >
-              Beranda
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="hover:text-secondary xl:block md:hidden hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
-              to="/edukasi"
-            >
-              Edukasi
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="hover:text-secondary xl:block md:hidden hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
-              to="/berita"
-            >
-              Berita
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="hover:text-secondary xl:block md:hidden hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
-              to="/peta"
-            >
-              Peta
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="hover:text-secondary xl:block md:hidden hidden after:content-[''] after:block after:bg-secondary after:w-0 after:h-1 after:transition-all after:duration-300 hover:after:w-full"
-              to="/tentang-kami"
-            >
-              Tentang Kami
-            </Link>
-          </li>
-        </ul>
-        <div className="profile gap-5 h-full p-3 items-center text-xl md:flex hidden">
-          <BtnPrimary type="primary">Register</BtnPrimary>
-          <BtnPrimary type="secondary">Login</BtnPrimary>
+
+        {/* Sidebar Navigation */}
+        <div className="drawer-side">
+          <label
+            htmlFor="my-drawer-3"
+            aria-label="close sidebar"
+            className="drawer-overlay"
+          ></label>
+          <ul className="bg-base-200 min-h-full w-80 p-4">
+            {[
+              { path: "/", label: "Beranda" },
+              { path: "/edukasi", label: "Edukasi" },
+              { path: "/berita", label: "Berita" },
+              { path: "/peta", label: "Peta" },
+              { path: "/tentang-kami", label: "Tentang Kami" },
+            ].map((item) => (
+              <li key={item.path}>
+                <NavLink
+                  to={item.path}
+                  className={({ isActive }) =>
+                    `relative block py-1 px-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-secondary after:w-0 after:transition-all after:duration-300 ${
+                      isActive
+                        ? "after:w-full bg-transparent"
+                        : "hover:after:w-full"
+                    }`
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className="hamburger md:hidden block">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="feather feather-menu"
-          >
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </div>
-      </nav>
+      </div>
     </header>
   );
 };

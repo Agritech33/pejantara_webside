@@ -7,8 +7,8 @@ const TentangKami = () => {
       <Helmet>
         <title>Tentang Kami</title>
       </Helmet>
-      <main className="w-full py-10 md:py-28">
-        <section className="bg-white shadow-md rounded-lg overflow-hidden">
+      <main className="w-full py-10 md:pt-[5.5rem]">
+        <section className="bg-white shadow-md overflow-hidden">
           <Carousel />
           <div className="p-4 md:p-6">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
