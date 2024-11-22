@@ -11,7 +11,7 @@ const Berita = () => {
       {id ? (
         <>
           <Helmet>
-            <title>Berita Page {id}</title>
+            <title>Berita Page</title>
           </Helmet>
           <DetailBeritaLayout id={id} />
         </>
