@@ -35,7 +35,7 @@ const CardBerita = ({
         <Link to={`/berita/${id}`}>
           <img
             src={imageUrl}
-            alt="Movie"
+            alt="image"
             className="w-full h-full object-cover rounded-2xl hover:scale-95 transition-all duration-300 ease-in-out"
           />
         </Link>
@@ -49,8 +49,8 @@ CardBerita.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
   imageUrl: PropTypes.string,
-  image: PropTypes.string,
   type: PropTypes.string,
+  image: PropTypes.string,
 };
 
 export default CardBerita;

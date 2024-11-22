@@ -26,7 +26,31 @@ const PenggunaLayout = () => {
                 </div>
               </div>
               <div className="right flex items-center px-10 text-black">
-                <h3>edit profile</h3>
+                {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                <button
+                  className="btn bg-accent border-accent hover:bg-accent-focus text-background hover:text-white hover:border-accent hover:bg-accent hover:scale-105 font-semibold rounded-md"
+                  onClick={() =>
+                    document.getElementById("my_modal_4").showModal()
+                  }
+                >
+                  Edit Profile
+                </button>
+                <dialog id="my_modal_4" className="modal">
+                  <div className="modal-box w-11/12 max-w-5xl bg-secondary">
+                    <h3 className="font-bold text-lg">Edit Profile</h3>
+                    <p className="py-4">Click the button below to close</p>
+                    <h3 className="font-bold text-lg">Edit Background</h3>
+                    <p className="py-4">Click the button below to close</p>
+                    <div className="modal-action">
+                      <form method="dialog">
+                        {/* if there is a button, it will close the modal */}
+                        <button className="btn bg-accent border-accent hover:bg-accent-focus text-background hover:text-white hover:border-accent hover:bg-accent hover:scale-105 font-semibold rounded-md">
+                          Close
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </dialog>
               </div>
             </div>
           </div>
