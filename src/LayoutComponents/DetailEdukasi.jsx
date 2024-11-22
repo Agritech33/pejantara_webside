@@ -23,10 +23,10 @@ const DetailEdukasi = ({ Id }) => {
               .filter((item) => item.id !== parseInt(Id))
               .map((item) => (
                 <CardEdukasi
+                  id={item.id}
                   key={item.id}
                   title={item.title}
                   imageUrl={item.image}
-                  id={item.id}
                 />
               ))}
           </div>
@@ -59,7 +59,7 @@ const DetailEdukasi = ({ Id }) => {
 };
 
 DetailEdukasi.propTypes = {
-  Id: PropTypes.number.isRequired,
+  Id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 export default DetailEdukasi;

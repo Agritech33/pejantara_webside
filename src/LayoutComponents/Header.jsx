@@ -74,7 +74,7 @@ const Header = () => {
             {/* Profile Buttons */}
             <div className="profile gap-5 p-3 text-xl md:flex hidden">
               <NavLink
-                to="/pengguna/profile"
+                to="/pengguna/kegiatan"
                 className="hover:cursor-pointer hover:text-secondary"
               >
                 profile

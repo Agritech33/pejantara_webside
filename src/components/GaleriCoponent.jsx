@@ -1,8 +1,6 @@
 import PropTypes from "prop-types";
 
 const GaleriComponent = ({ data }) => {
-  console.log(data);
-
   return (
     <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-5 gap-4">
       <div className="col-span-2 row-span-5 bg-slate-500 rounded-xl sm:col-span-2 md:col-span-3 lg:col-span-2">
