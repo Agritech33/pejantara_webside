@@ -14,6 +14,13 @@ import Settings from "../pages/pengguna/Settings";
 import KegiatanPage from "../pages/pengguna/Kegiatan";
 import LaporanPage from "../pages/pengguna/Laporan";
 import PointsPage from "../pages/pengguna/Points";
+import AdminLayout from "../pages/admin/AdminLayout";
+import AdminPage from "../pages/admin/Admin";
+import AdminPenggunaPage from "../pages/admin/pengguna/Pengguna";
+import AdminStatistikPage from "../pages/admin/statistik/Statistik";
+import AdminDataPejantaraPage from "../pages/admin/data pejantara/DataPejantara";
+import AdminAkunPage from "../pages/admin/akun/Akun";
+import AdminPengaturanPage from "../pages/admin/pengaturan/Pengaturan";
 
 const AppRouter = () => (
   <BrowserRouter
@@ -38,6 +45,19 @@ const AppRouter = () => (
           <Route path="laporan" element={<LaporanPage />} />
           <Route path="kegiatan" element={<KegiatanPage />} />
         </Route>
+      </Route>
+
+      {/* admin layout routes */}
+      <Route element={<AdminLayout />}>
+        <Route path="admin/beranda" element={<AdminPage />} />
+        <Route path="admin/statistik" element={<AdminStatistikPage />} />
+        <Route
+          path="admin/data pejantara"
+          element={<AdminDataPejantaraPage />}
+        />
+        <Route path="admin/pengguna" element={<AdminPenggunaPage />} />
+        <Route path="admin/akun" element={<AdminAkunPage />} />
+        <Route path="admin/pengaturan" element={<AdminPengaturanPage />} />
       </Route>
 
       {/* Demo Route */}

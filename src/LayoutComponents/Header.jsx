@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-// import BtnPrimary from "../components/BtnPrimary";
+import { jwtDecode } from "jwt-decode";
+import BtnPrimary from "../components/BtnPrimary";
 
 const Header = () => {
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [userName, setUserName] = useState(null);
 
   useEffect(() => {
+    // Scroll event handler
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       if (currentScrollY > lastScrollY) {
@@ -23,6 +26,26 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollY]);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    console.log("Mengambil token saat mount:", token);
+    if (token) {
+      try {
+        const decoded = jwtDecode(token);
+        console.log("Decoded JWT:", decoded);
+        setUserName(decoded.name);
+      } catch (error) {
+        console.error("Invalid token:", error);
+      }
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    setUserName(null);
+    window.location.href = "/";
+  };
 
   return (
     <header
@@ -73,14 +96,22 @@ const Header = () => {
 
             {/* Profile Buttons */}
             <div className="profile gap-5 p-3 text-xl md:flex hidden">
-              <NavLink
-                to="/pengguna/kegiatan"
-                className="hover:cursor-pointer hover:text-secondary"
-              >
-                profile
-              </NavLink>
-              {/* <BtnPrimary type="primary">Register</BtnPrimary>
-              <BtnPrimary type="secondary">Login</BtnPrimary> */}
+              {userName ? (
+                <>
+                  <NavLink
+                    to="/pengguna/kegiatan"
+                    className="text-background font-semibold"
+                  >
+                    Hello, {userName}
+                  </NavLink>
+                  <button onClick={handleLogout}>Logout</button>
+                </>
+              ) : (
+                <>
+                  <BtnPrimary type="primary">Register</BtnPrimary>
+                  <BtnPrimary type="secondary">Login</BtnPrimary>
+                </>
+              )}
             </div>
 
             {/* Mobile Menu Toggle */}

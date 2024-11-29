@@ -12,7 +12,7 @@ const Edukasi = () => {
       {id ? (
         <>
           <Helmet>
-            <title>Edukasi Page {id}</title>
+            <title>Edukasi Page </title>
           </Helmet>
           <div className="w-full flex items-center justify-center">
             <DetailEdukasi Id={id} />

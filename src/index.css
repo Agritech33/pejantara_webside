@@ -15,3 +15,38 @@ body {
   scroll-behavior: smooth;
   font-family: "roboto", sans-serif;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  .animate-fade-in-2 {
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  .animate-fade-in-3 {
+    animation: fadeIn 2s ease-in-out;
+  }
+}
+
+.progress-error::-webkit-progress-value {
+  background-color: #16312b;
+}
+
+.progress-success::-webkit-progress-value {
+  background-color: #16312b;
+}
+
+.progress-info::-webkit-progress-value {
+  background-color: #89e557;
+}
