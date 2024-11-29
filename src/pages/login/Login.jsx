@@ -12,9 +12,9 @@ const Login = () => {
   const handleLogin = async () => {
     try {
       const response = await login(email, password);
-      localStorage.setItem("token", response.token); // Simpan token
+      localStorage.setItem("token", response.token);
       setSuccess("Login successful! Token: " + response.token);
-      window.location.href = "/"; // Arahkan ke dashboard
+      window.location.href = "/";
       setError("");
     } catch (err) {
       setError(err.message);
