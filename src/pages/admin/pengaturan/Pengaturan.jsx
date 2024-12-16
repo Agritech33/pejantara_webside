@@ -167,7 +167,44 @@ const AdminPengaturanPage = () => {
 
   return (
     <div>
-      <h1>pengaturan page</h1>
+      <div className="p-6">
+        <header className="flex justify-between items-center mb-6">
+          <h1 className="text-4xl font-bold text-[#1a3b1d]">Pengaturan</h1>
+          <div className="flex items-center space-x-4">
+            <i className="fas fa-bell text-xl"></i>
+            <div className="flex items-center space-x-2">
+              <img
+                src="https://placehold.co/40x40"
+                alt="User profile"
+                className="w-10 h-10 rounded-full"
+              />
+              <span>Alex Saiful</span>
+              <i className="fas fa-chevron-down"></i>
+            </div>
+          </div>
+        </header>
+        <div className="bg-background p-6 rounded-lg">
+          <div className="flex space-x-4 mb-4 border-b-2 border-[#d3d3b8]">
+            <button
+              className={`pb-2 ${
+                activeTab === "editProfile" ? "border-b-2 border-black" : ""
+              }`}
+              onClick={() => setActiveTab("editProfile")}
+            >
+              Edit Profil
+            </button>
+            <button
+              className={`pb-2 ${
+                activeTab === "security" ? "border-b-2 border-black" : ""
+              }`}
+              onClick={() => setActiveTab("security")}
+            >
+              Keamanan
+            </button>
+          </div>
+          {renderContent()}
+        </div>
+      </div>
     </div>
   );
 };
