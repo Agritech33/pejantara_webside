@@ -14,7 +14,7 @@ const LocationMarker = ({ onLocationFound }) => {
           const newPosition = [latitude, longitude];
           setPosition(newPosition);
           map.flyTo(newPosition, 13);
-          onLocationFound(newPosition); // Kirim data ke komponen parent `Maps`
+          onLocationFound(newPosition);
         },
         (error) => {
           console.error("Geolocation error:", error);

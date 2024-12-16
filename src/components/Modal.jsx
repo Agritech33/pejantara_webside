@@ -20,7 +20,7 @@ const Modal = ({ isOpen, onClose, user }) => {
 Modal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
-  user: PropTypes.node, // Jadikan opsional
+  user: PropTypes.node,
 };
 
 export default Modal;

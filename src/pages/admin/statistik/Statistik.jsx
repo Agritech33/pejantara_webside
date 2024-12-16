@@ -13,7 +13,7 @@ const AdminStatistikPage = () => {
     data: muatanSampah,
     type: "muatanSampah",
   });
-  const [selectedType, setSelectedType] = useState(null);
+  const [selectedType, setSelectedType] = useState("muatanSampah");
 
   const buttons = [
     { id: 1, label: "muatan sampah", imageUrl: "/Reuse.png" },

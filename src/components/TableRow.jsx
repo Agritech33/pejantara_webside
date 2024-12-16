@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const TableRow = ({ user, onDetailsClick }) => (
+const TableRow = ({ user, onDetailsClick, role }) => (
   <tr className="text-accent hover:bg-slate-300">
     <td>
       <label>
@@ -24,10 +24,10 @@ const TableRow = ({ user, onDetailsClick }) => (
       </div>
     </td>
     <td>
-      {user.company || user.author.name}
+      {user.company || user.author?.name}
       <br />
       <span className="badge badge-ghost badge-sm">
-        {user.pekerjaan || user.author.email}
+        {user.pekerjaan || user.author?.email}
       </span>
     </td>
     <td>{user.email || user.description}</td>
@@ -36,15 +36,16 @@ const TableRow = ({ user, onDetailsClick }) => (
         className="btn btn-ghost btn-xs"
         onClick={() => onDetailsClick(user)}
       >
-        Details
+        {role === "pengguna" ? "View" : "Details"}
       </button>
     </td>
   </tr>
 );
 
 TableRow.propTypes = {
-  user: PropTypes.object.isRequired,
-  onDetailsClick: PropTypes.func.isRequired,
+  user: PropTypes.object,
+  onDetailsClick: PropTypes.func,
+  role: PropTypes.string,
 };
 
 export default TableRow;

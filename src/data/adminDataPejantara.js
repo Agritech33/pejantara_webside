@@ -4,6 +4,7 @@ export const berita = [
     title: "Berita Pertama",
     description: "Deskripsi berita pertama.",
     date: "2024-12-01",
+    type: "berita",
     image:
       "https://static.vecteezy.com/system/resources/previews/005/544/718/non_2x/profile-icon-design-free-vector.jpg",
     author: {
@@ -14,9 +15,10 @@ export const berita = [
   },
   {
     id: 2,
-    title: "Berita Kedua",
-    description: "Deskripsi berita kedua.",
+    title: "Edukasi Pertama",
+    description: "Deskripsi edukasi pertama.",
     date: "2024-12-01",
+    type: "edukasi",
     image:
       "https://static.vecteezy.com/system/resources/previews/005/544/718/non_2x/profile-icon-design-free-vector.jpg",
     author: {
@@ -27,9 +29,10 @@ export const berita = [
   },
   {
     id: 3,
-    title: "Berita Ketiga",
-    description: "Deskripsi berita ketiga.",
+    title: "Berita Kedua",
+    description: "Deskripsi berita kedua.",
     date: "2024-12-01",
+    type: "berita",
     image:
       "https://static.vecteezy.com/system/resources/previews/005/544/718/non_2x/profile-icon-design-free-vector.jpg",
     author: {
@@ -40,9 +43,10 @@ export const berita = [
   },
   {
     id: 4,
-    title: "Berita Keempat",
-    description: "Deskripsi berita keempat.",
+    title: "Edukasi Kedua",
+    description: "Deskripsi Edukasi Kedua.",
     date: "2024-12-01",
+    type: "edukasi",
     image:
       "https://static.vecteezy.com/system/resources/previews/005/544/718/non_2x/profile-icon-design-free-vector.jpg",
     author: {
@@ -53,9 +57,10 @@ export const berita = [
   },
   {
     id: 5,
-    title: "Berita Kelima",
-    description: "Deskripsi berita kelima.",
+    title: "Berita Ketiga",
+    description: "Deskripsi berita ketiga.",
     date: "2024-12-01",
+    type: "berita",
     image:
       "https://static.vecteezy.com/system/resources/previews/005/544/718/non_2x/profile-icon-design-free-vector.jpg",
     author: {
@@ -66,9 +71,10 @@ export const berita = [
   },
   {
     id: 6,
-    title: "Berita Keenam",
-    description: "Deskripsi berita keenam.",
+    title: "Edukasi Ketiga",
+    description: "Deskripsi Edukasi Ketiga",
     date: "2024-12-01",
+    type: "edukasi",
     image:
       "https://static.vecteezy.com/system/resources/previews/005/544/718/non_2x/profile-icon-design-free-vector.jpg",
     author: {
@@ -79,9 +85,10 @@ export const berita = [
   },
   {
     id: 7,
-    title: "Berita Ketujuh",
-    description: "Deskripsi berita ketujuh.",
+    title: "Berita Keempat",
+    description: "Deskripsi berita keempat.",
     date: "2024-12-01",
+    type: "berita",
     image:
       "https://static.vecteezy.com/system/resources/previews/005/544/718/non_2x/profile-icon-design-free-vector.jpg",
     author: {
@@ -92,9 +99,10 @@ export const berita = [
   },
   {
     id: 8,
-    title: "Berita Kedelapan",
-    description: "Deskripsi berita kedelapan.",
+    title: "Edukasi Keempat",
+    description: "Deskripsi Edukasi Keempat",
     date: "2024-12-01",
+    type: "edukasi",
     image:
       "https://static.vecteezy.com/system/resources/previews/005/544/718/non_2x/profile-icon-design-free-vector.jpg",
     author: {
@@ -105,9 +113,10 @@ export const berita = [
   },
   {
     id: 9,
-    title: "Berita Kesembilan",
-    description: "Deskripsi berita kesembilan.",
+    title: "Berita Kelima",
+    description: "Deskripsi berita kelima.",
     date: "2024-12-01",
+    type: "berita",
     image:
       "https://static.vecteezy.com/system/resources/previews/005/544/718/non_2x/profile-icon-design-free-vector.jpg",
     author: {
@@ -118,9 +127,10 @@ export const berita = [
   },
   {
     id: 10,
-    title: "Berita Kesepuluh",
-    description: "Deskripsi berita kesepuluh.",
+    title: "Edukasi Kelima",
+    description: "Deskripsi Edukasi Kelima",
     date: "2024-12-01",
+    type: "berita",
     image:
       "https://static.vecteezy.com/system/resources/previews/005/544/718/non_2x/profile-icon-design-free-vector.jpg",
     author: {
@@ -134,6 +144,7 @@ export const berita = [
     title: "Berita Kesebelas",
     description: "Deskripsi berita kesebelas.",
     date: "2024-12-01",
+    type: "berita",
     image:
       "https://static.vecteezy.com/system/resources/previews/005/544/718/non_2x/profile-icon-design-free-vector.jpg",
     author: {
@@ -144,9 +155,10 @@ export const berita = [
   },
   {
     id: 12,
-    title: "Berita Keduabelas",
-    description: "Deskripsi berita keduabelas.",
+    title: "Edukasi Ketigabelas",
+    description: "Deskripsi Edukasi Ketigabelas",
     date: "2024-12-01",
+    type: "edukasi",
     image:
       "https://static.vecteezy.com/system/resources/previews/005/544/718/non_2x/profile-icon-design-free-vector.jpg",
     author: {
@@ -160,6 +172,7 @@ export const berita = [
     title: "Berita Ketigabelas",
     description: "Deskripsi berita ketigabelas.",
     date: "2024-12-01",
+    type: "berita",
     image:
       "https://static.vecteezy.com/system/resources/previews/005/544/718/non_2x/profile-icon-design-free-vector.jpg",
     author: {
@@ -170,9 +183,10 @@ export const berita = [
   },
   {
     id: 14,
-    title: "Berita Keempatbelas",
-    description: "Deskripsi berita keempatbelas.",
+    title: "Edukasi Kelimabelas",
+    description: "Deskripsi Edukasi Kelimabelas",
     date: "2024-12-01",
+    type: "edukasi",
     image:
       "https://static.vecteezy.com/system/resources/previews/005/544/718/non_2x/profile-icon-design-free-vector.jpg",
     author: {
@@ -186,6 +200,7 @@ export const berita = [
     title: "Berita Kelimabelas",
     description: "Deskripsi berita kelimabelas.",
     date: "2024-12-01",
+    type: "berita",
     image:
       "https://static.vecteezy.com/system/resources/previews/005/544/718/non_2x/profile-icon-design-free-vector.jpg",
     author: {
@@ -416,18 +431,6 @@ export const users = [
   {
     id: 19,
     name: "User s",
-    email: "userO@example.com",
-    password: "passwordO",
-    location: "example location",
-    company: "companyO",
-    pekerjaan: "Backend Developer",
-    image_profile:
-      "https://static.vecteezy.com/system/resources/previews/005/544/718/non_2x/profile-icon-design-free-vector.jpg",
-    role: "admin",
-  },
-  {
-    id: 20,
-    name: "User t",
     email: "userO@example.com",
     password: "passwordO",
     location: "example location",

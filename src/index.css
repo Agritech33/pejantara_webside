@@ -50,3 +50,12 @@ body {
 .progress-info::-webkit-progress-value {
   background-color: #89e557;
 }
+
+.dropdown[open] + .tables-container {
+  margin-top: 850px;
+  transition: margin 0.5s ease-in-out;
+}
+
+.tables-container {
+  transition: margin 0.5s ease-in-out;
+}

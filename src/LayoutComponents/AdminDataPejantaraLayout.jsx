@@ -2,15 +2,35 @@ import { useState } from "react";
 import Tables from "../components/Tables";
 import { users, berita } from "../data/adminDataPejantara";
 
-const DataPejantaraLayout = () => {
+const AdminDataPejantaraLayout = () => {
   const [activeSubNavClick, setActiveSubNavClick] = useState(1);
   const [dataTable, setDataTable] = useState(berita);
 
   const subNavClick = [
-    { id: 1, label: "Data Konten", imageUrl: "/Reuse.png" },
-    { id: 2, label: "Admin", imageUrl: "/Reuse.png" },
-    { id: 3, label: "Akun Website", imageUrl: "/Reuse.png" },
-    { id: 4, label: "Akun Mobile", imageUrl: "/Reuse.png" },
+    {
+      id: 1,
+      label: "Data Konten",
+      imageUrl: "/Reuse.png",
+      totalData: berita.length,
+    },
+    {
+      id: 2,
+      label: "Admin",
+      imageUrl: "/Reuse.png",
+      totalData: users.filter((user) => user.role === "admin").length,
+    },
+    {
+      id: 3,
+      label: "Akun Website",
+      imageUrl: "/Reuse.png",
+      totalData: users.filter((user) => user.role === "member web").length,
+    },
+    {
+      id: 4,
+      label: "Akun Mobile",
+      imageUrl: "/Reuse.png",
+      totalData: users.filter((user) => user.role === "member mobile").length,
+    },
   ];
 
   const handleSubNavClick = (id) => {
@@ -42,7 +62,7 @@ const DataPejantaraLayout = () => {
             onClick={() => handleSubNavClick(nav.id)}
             className={`w-1/4 h-40 bg-secondaryAccent rounded-2xl flex items-center justify-center gap-3 text-accent ${
               nav.id === activeSubNavClick
-                ? "bg-bgBtn scale-110 border-none"
+                ? "bg-bgBtn scale-110 border-none bg-opacity-100"
                 : "border-accent text-accent bg-[#EFEEEC] bg-opacity-50"
             }`}
           >
@@ -52,15 +72,15 @@ const DataPejantaraLayout = () => {
               className="w-16 h-16 p-2 bg-secondary rounded-full"
             />
             <div>
-              <h4>25</h4>
+              <h4>{nav.totalData}</h4>
               <p>{nav.label}</p>
             </div>
           </button>
         ))}
       </div>
-      <Tables dataTable={dataTable} activeSubNavClick={activeSubNavClick} />
+      <Tables dataTable={dataTable} type={activeSubNavClick} />
     </>
   );
 };
 
-export default DataPejantaraLayout;
+export default AdminDataPejantaraLayout;

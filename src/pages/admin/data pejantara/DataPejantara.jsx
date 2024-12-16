@@ -1,5 +1,6 @@
 import { useState } from "react";
-import DataPejantaraLayout from "../../../LayoutComponents/DataPejantaraLayout";
+import AdminDataPejantaraLayout from "../../../LayoutComponents/AdminDataPejantaraLayout";
+import ActiveNavLayout from "../../../LayoutComponents/ActiveNavLayout";
 
 const AdminDataPejantaraPage = () => {
   const [activeNavClick, setActiveNavClick] = useState(1);
@@ -46,7 +47,24 @@ const AdminDataPejantaraPage = () => {
           </button>
         ))}
       </div>
-      <DataPejantaraLayout />
+      {activeNavClick === 1 ? (
+        <AdminDataPejantaraLayout />
+      ) : activeNavClick === 2 ? (
+        <ActiveNavLayout
+          activeNavClick={activeNavClick}
+          type={activeNavClick}
+        />
+      ) : activeNavClick === 3 ? (
+        <ActiveNavLayout
+          activeNavClick={activeNavClick}
+          type={activeNavClick}
+        />
+      ) : (
+        <ActiveNavLayout
+          activeNavClick={activeNavClick}
+          type={activeNavClick}
+        />
+      )}
     </div>
   );
 };

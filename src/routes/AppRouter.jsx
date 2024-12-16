@@ -21,6 +21,8 @@ import AdminStatistikPage from "../pages/admin/statistik/Statistik";
 import AdminDataPejantaraPage from "../pages/admin/data pejantara/DataPejantara";
 import AdminAkunPage from "../pages/admin/akun/Akun";
 import AdminPengaturanPage from "../pages/admin/pengaturan/Pengaturan";
+import AdminPenggunaDetail from "../pages/admin/pengguna/AdminPenggunaDetail";
+import NotifikasiPage from "../pages/admin/notifikasi/Notifikasi";
 
 const AppRouter = () => (
   <BrowserRouter
@@ -56,8 +58,10 @@ const AppRouter = () => (
           element={<AdminDataPejantaraPage />}
         />
         <Route path="admin/pengguna" element={<AdminPenggunaPage />} />
+        <Route path="admin/pengguna/:id" element={<AdminPenggunaDetail />} />
         <Route path="admin/akun" element={<AdminAkunPage />} />
         <Route path="admin/pengaturan" element={<AdminPengaturanPage />} />
+        <Route path="admin/notifikasi/:id" element={<NotifikasiPage />} />
       </Route>
 
       {/* Demo Route */}
