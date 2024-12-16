@@ -7,24 +7,30 @@ const UserDetail = ({ user }) => {
     <div>
       <div className="flex items-center gap-4">
         <img
-          src={user.imgUrl}
-          alt={user.name}
+          src={user.image_profile || user.image}
+          alt={user.name || user.title}
           className="mask mask-squircle w-16 h-16"
         />
         <div>
-          <h2 className="text-xl font-bold">{user.name}</h2>
-          <p className="text-sm text-gray-500">{user.location}</p>
+          <h2 className="text-xl font-bold">{user.name || user.title}</h2>
+          <p className="text-sm text-gray-500">{user.location || user.date}</p>
         </div>
       </div>
       <div className="mt-4">
         <p>
-          <strong>Job:</strong> {user.job}
+          <strong>
+            {user.pekerjaan === undefined ? "Description: " : "Job: "}
+          </strong>
+          {user.pekerjaan || user.description}
         </p>
         <p>
-          <strong>Company:</strong> {user.company}
+          <strong>
+            {user.company === undefined ? "Author: " : "Company: "}
+          </strong>
+          {user.company || user.author.name}
         </p>
         <p>
-          <strong>Favorite Color:</strong> {user.favoriteColor}
+          <strong>Email: </strong> {user.email || user.author.email}
         </p>
       </div>
     </div>

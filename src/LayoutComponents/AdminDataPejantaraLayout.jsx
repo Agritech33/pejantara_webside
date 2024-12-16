@@ -1,21 +1,21 @@
 import { useState } from "react";
-import Tables from "../../../components/Tables";
-import { users } from "../../../data/adminDataPejantara";
+import Tables from "../components/Tables";
+import { users, berita } from "../data/adminDataPejantara";
 
-const AdminPenggunaPage = () => {
+const AdminDataPejantaraLayout = () => {
   const [activeSubNavClick, setActiveSubNavClick] = useState(1);
-  const [dataTable, setDataTable] = useState(users);
+  const [dataTable, setDataTable] = useState(berita);
 
   const subNavClick = [
     {
       id: 1,
-      label: "Total Pengguna",
+      label: "Data Konten",
       imageUrl: "/Reuse.png",
-      totalData: users.length,
+      totalData: berita.length,
     },
     {
       id: 2,
-      label: "Pengguna Terbaru",
+      label: "Admin",
       imageUrl: "/Reuse.png",
       totalData: users.filter((user) => user.role === "admin").length,
     },
@@ -37,7 +37,7 @@ const AdminPenggunaPage = () => {
     setActiveSubNavClick(id);
     switch (id) {
       case 1:
-        setDataTable(users);
+        setDataTable(berita);
         break;
       case 2:
         setDataTable(users.filter((user) => user.role === "admin"));
@@ -49,16 +49,13 @@ const AdminPenggunaPage = () => {
         setDataTable(users.filter((user) => user.role === "member mobile"));
         break;
       default:
-        setDataTable(users);
+        setDataTable([]);
     }
   };
 
   return (
-    <div className="flex flex-col w-full">
-      <div className="title flex items-center gap-3">
-        <h1 className="text-4xl font-bold text-accent font-oswald">Pengguna</h1>
-      </div>
-      <div className="sub-nav flex items-center gap-10 my-20 w-full">
+    <>
+      <div className="containerLink w-full items-center flex gap-10">
         {subNavClick.map((nav) => (
           <button
             key={nav.id}
@@ -81,9 +78,9 @@ const AdminPenggunaPage = () => {
           </button>
         ))}
       </div>
-      <Tables dataTable={dataTable} type={activeSubNavClick} role="pengguna" />
-    </div>
+      <Tables dataTable={dataTable} type={activeSubNavClick} />
+    </>
   );
 };
 
-export default AdminPenggunaPage;
+export default AdminDataPejantaraLayout;

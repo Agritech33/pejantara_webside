@@ -1,6 +1,5 @@
 import { useState } from "react";
 import StatistikLayout from "../../../LayoutComponents/StatistikLayout";
-import Tables from "../../../components/Tables";
 import {
   muatanSampah,
   tpsTpa,
@@ -14,7 +13,7 @@ const AdminStatistikPage = () => {
     data: muatanSampah,
     type: "muatanSampah",
   });
-  const [selectedType, setSelectedType] = useState(null);
+  const [selectedType, setSelectedType] = useState("muatanSampah");
 
   const buttons = [
     { id: 1, label: "muatan sampah", imageUrl: "/Reuse.png" },
@@ -42,8 +41,6 @@ const AdminStatistikPage = () => {
     }
   };
 
-  console.log(selectedType);
-
   const title =
     selectedType === "muatanSampah"
       ? "Pusat Pemantauan Sampah Bersama Pejantara"
@@ -57,9 +54,14 @@ const AdminStatistikPage = () => {
 
   return (
     <div className="flex flex-col gap-10">
-      <h1 className="text-4xl font-bold text-accent mb-10 capitalize">
-        statistik pejantara
-      </h1>
+      <div className="title flex items-center gap-3">
+        <h1 className="text-4xl font-bold text-accent font-oswald">
+          Statistik
+        </h1>
+        <h1 className="text-4xl font-bold text-secondary font-oswald">
+          Pejantara
+        </h1>
+      </div>
       <div className="w-full">
         <div className="w-full border-b-2 border-black">
           <div className="flex py-10 w-full text-accent text-xl font-semibold relative">
@@ -114,7 +116,6 @@ const AdminStatistikPage = () => {
           </p>
         </div>
       </div>
-      <Tables />
     </div>
   );
 };

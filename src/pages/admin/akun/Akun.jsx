@@ -6,17 +6,29 @@ const AdminAkunPage = () => {
         <div className="flex items-center space-x-2">
           <i className="fas fa-bell text-[#2b2b2b]"></i>
           <div className="flex items-center space-x-1">
-            <img src="https://placehold.co/30x30" alt="User avatar" className="w-8 h-8 rounded-full" />
+            <img
+              src="https://placehold.co/30x30"
+              alt="User avatar"
+              className="w-8 h-8 rounded-full"
+            />
             <span className="text-[#2b2b2b]">Alex saiful</span>
             <i className="fas fa-chevron-down text-[#2b2b2b]"></i>
           </div>
         </div>
       </div>
       <div className="relative mb-6">
-        <img src="../BgAkun.png" alt="Profile background" className="w-full h-60 object-cover rounded-lg" />
+        <img
+          src="../BgAkun.png"
+          alt="Profile background"
+          className="w-full h-60 object-cover rounded-lg"
+        />
         <div className="absolute inset-0 flex justify-center items-center">
           <div className=" p-4 rounded-full">
-          <img src="../logo.png" alt="User avatar" className="w-24 h-24 rounded-full" />
+            <img
+              src="../logo.png"
+              alt="User avatar"
+              className="w-24 h-24 rounded-full"
+            />
           </div>
         </div>
       </div>
