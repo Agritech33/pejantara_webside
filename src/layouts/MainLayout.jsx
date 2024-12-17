@@ -1,6 +1,7 @@
 import Header from "../LayoutComponents/Header";
 import Footer from "../LayoutComponents/Footer";
 import { Outlet } from "react-router-dom";
+import ModalChat from "../components/ModalChat";
 
 const MainLayout = () => {
   return (
@@ -9,6 +10,7 @@ const MainLayout = () => {
       <main>
         <Outlet />
       </main>
+      <ModalChat />
       <Footer />
     </div>
   );
