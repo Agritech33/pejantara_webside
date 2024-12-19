@@ -14,6 +14,7 @@ const KegiatanPage = () => {
               title={item.title}
               subtitle={item.subtitle}
               imageUrl={item.image}
+              item={dataKegiatan}
             />
           ))}
         </div>
@@ -29,6 +30,7 @@ const KegiatanPage = () => {
               title={item.title}
               subtitle={item.subtitle}
               imageUrl={item.image}
+              item={dataKegiatan}
             />
           ))}
         </div>
