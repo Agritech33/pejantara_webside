@@ -105,6 +105,12 @@ const Header = () => {
                     Hello, {userName}
                   </NavLink>
                   <button onClick={handleLogout}>Logout</button>
+                  <NavLink
+                    to="admin/beranda"
+                    className="text-background font-semibold"
+                  >
+                    admin
+                  </NavLink>
                 </>
               ) : (
                 <>
