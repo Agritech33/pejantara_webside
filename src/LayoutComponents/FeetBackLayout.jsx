@@ -42,7 +42,7 @@ const FeetBackLayout = () => {
           <div className="container-feetback flex flex-col gap-10 mt-28">
             <div className="card-feetback py-3 px-5 bg-secondaryAccent shadow-lg shadow-slate-600 flex justify-center items-center gap-5 rounded-2xl">
               <img
-                src="https://i.pinimg.com/564x/55/cd/61/55cd619d37e96382475dc3056e82efd5.jpg"
+                src="/avatar.jpg"
                 alt="feetback"
                 className="feetback w-32 h-32 rounded-full shadow-md shadow-slate-600"
               />
@@ -59,7 +59,7 @@ const FeetBackLayout = () => {
             </div>
             <div className="card-feetback py-3 px-5 bg-secondaryAccent shadow-lg shadow-slate-600 flex justify-center items-center gap-5 rounded-2xl">
               <img
-                src="https://i.pinimg.com/564x/55/cd/61/55cd619d37e96382475dc3056e82efd5.jpg"
+                src="/avatar.jpg"
                 alt="feetback"
                 className="feetback w-32 h-32 rounded-full shadow-md shadow-slate-600"
               />
@@ -76,7 +76,7 @@ const FeetBackLayout = () => {
             </div>
             <div className="card-feetback py-3 px-5 bg-secondaryAccent shadow-lg shadow-slate-600 flex justify-center items-center gap-5 rounded-2xl">
               <img
-                src="https://i.pinimg.com/564x/55/cd/61/55cd619d37e96382475dc3056e82efd5.jpg"
+                src="/avatar.jpg"
                 alt="feetback"
                 className="feetback w-32 h-32 rounded-full shadow-md shadow-slate-600"
               />
