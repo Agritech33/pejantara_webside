@@ -36,7 +36,7 @@ const Edukasi = () => {
                         className="w-20 h-20"
                       />
                       <p className="font-oswald text-3xl font-semibold text-white">
-                        subtitle
+                        Reduce
                       </p>
                     </div>
                     <div className="icon-container flex flex-col items-center justify-center">
@@ -46,7 +46,7 @@ const Edukasi = () => {
                         className="w-20 h-20"
                       />
                       <p className="font-oswald text-3xl font-semibold text-white">
-                        subtitle
+                        Reuse
                       </p>
                     </div>
                     <div className="icon-container flex flex-col items-center justify-center">
@@ -56,7 +56,7 @@ const Edukasi = () => {
                         className="w-20 h-20"
                       />
                       <p className="font-oswald text-3xl font-semibold text-white">
-                        subtitle
+                        Recycle
                       </p>
                     </div>
                   </div>
