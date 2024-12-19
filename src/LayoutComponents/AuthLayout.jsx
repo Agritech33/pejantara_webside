@@ -3,9 +3,7 @@ import PropTypes from "prop-types";
 const AuthLayout = ({ href, title, paragraph, children, type = "login" }) => {
   const navigate = useNavigate();
   const lyoutType =
-    type === "register"
-      ? "w-full flex bg-white flex-row-reverse"
-      : "w-full flex bg-white";
+    type === "register" ? "w-full flex flex-row-reverse" : "w-full flex";
   const toBerandaType =
     type === "register"
       ? "absolute top-10 left-10 text-white text-xl border-2 border-white p-4 rounded-full"
