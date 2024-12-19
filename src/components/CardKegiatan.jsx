@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const CardKegiatan = ({ title, imageUrl }) => {
+const CardKegiatan = ({ title, imageUrl, item }) => {
   return (
     <div className="card bg-secondary shadow-xl w-[35rem] h-[40vh]">
       <figure className="w-full h-1/2">
@@ -12,26 +12,33 @@ const CardKegiatan = ({ title, imageUrl }) => {
       </figure>
       <div className="card-body h-1/2 text-white">
         <h2 className="card-title text-sm">{title}</h2>
-        <p className="text-sm">Click the button to listen on Spotiwhy app.</p>
+        <p className="text-sm">Click tombol untuk melihat selengkapnya</p>
         <div className="card-actions justify-end">
           <button
             className="btn"
             onClick={() => document.getElementById("my_modal_5").showModal()}
           >
-            open modal
+            Baca Selengkap nya
           </button>
-          <dialog id="my_modal_5" className="modal">
-            <div className="modal-box w-11/12 max-w-5xl">
-              <h3 className="font-bold text-lg">Hello!</h3>
-              <p className="py-4">Click the button below to close</p>
-              <div className="modal-action">
-                <form method="dialog">
-                  {/* if there is a button, it will close the modal */}
-                  <button className="btn">Close</button>
-                </form>
+          {item.map((item) => (
+            <dialog key={item.id} id="my_modal_5" className="modal">
+              <div className="modal-box w-11/12 max-w-5xl">
+                <img
+                  src={item.image}
+                  alt="image"
+                  className="w-full h-80 object-cover"
+                />
+                <h3 className="font-bold text-lg">{item.title}</h3>
+                <p className="py-4">{item.deskripsi}</p>
+                <div className="modal-action">
+                  <form method="dialog">
+                    {/* if there is a button, it will close the modal */}
+                    <button className="btn">Close</button>
+                  </form>
+                </div>
               </div>
-            </div>
-          </dialog>
+            </dialog>
+          ))}
         </div>
       </div>
     </div>
@@ -41,6 +48,7 @@ const CardKegiatan = ({ title, imageUrl }) => {
 CardKegiatan.propTypes = {
   title: PropTypes.string,
   imageUrl: PropTypes.string,
+  item: PropTypes.array,
 };
 
 export default CardKegiatan;
